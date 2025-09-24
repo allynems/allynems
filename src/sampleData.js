@@ -3,11 +3,11 @@ const sampleData = {
   title: "Product Manager | Data & Offshore Systems",
   summary:
     "Product-minded engineer with experience building algorithms and digital products for offshore energy. Skilled in product strategy and technical delivery.",
-  profileImage: "https://via.placeholder.com/150",
+  profileImage: "",
   contacts: {
     linkedin: "https://linkedin.com/in/allyne-dos-santos",
     github: "https://github.com/allynems",
-    email: "seuemail@example.com",
+    email: "allynems@outlook.com",
   },
   experience: [
     {

@@ -20,7 +20,7 @@ function App() {
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save("cv.pdf");
+      pdf.save("cv-Allyne_dos_Santos.pdf");
     });
   };
 
