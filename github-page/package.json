@@ -1,7 +1,7 @@
 {
   "name": "github-page",
   "version": "0.1.0",
-  "homepage": "https://github.com/allynems/allynems.github.io",
+  "homepage": "https://allynems.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -11,6 +11,7 @@
     "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
