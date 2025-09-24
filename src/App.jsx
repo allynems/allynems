@@ -45,7 +45,7 @@ function App() {
 
         <main id="cv" className="space-y-6">
           {/* Experiência */}
-          <Section title="Experiência">
+          <Section title="Work Experience">
             {sampleData.experience.map((exp, idx) => (
               <SectionItem
                 key={idx}
@@ -57,7 +57,7 @@ function App() {
           </Section>
 
           {/* Educação */}
-          <Section title="Educação">
+          <Section title="Education">
             {sampleData.education.map((edu, idx) => (
               <SectionItem
                 key={idx}
