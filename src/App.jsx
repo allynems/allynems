@@ -19,7 +19,7 @@ function App() {
     >
       <div className="max-w-3xl mx-auto p-8 space-y-8">
         <Header
-          name={sampleData.name}
+          name={"About me"}
           title={sampleData.title}
           dark={dark}
           setDark={setDark}

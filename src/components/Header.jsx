@@ -23,24 +23,24 @@ export default function Header({ name, title, dark, setDark }) {
           >
             Download CV ▾
           </button>
-          {open && (
-            <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md">
-              <a
-                href="./public/CV_resume_allyne_PORT.pdf"
-                download
-                className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                📄 CV em Português
-              </a>
-              <a
-                href="./public/CV_resume_allyne_ENG.pdf"
-                download
-                className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                📄 CV in English
-              </a>
-            </div>
-          )}
+            {open && (
+              <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md">
+                <a
+                  href="../public/CV_resume_allyne_PORT.pdf"
+                  download
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  📄 CV em Português
+                </a>
+                <a
+                  href="../public/CV_resume_allyne_ENG.pdf"
+                  download
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  📄 CV in English
+                </a>
+              </div>
+            )}
         </div>
       </div>
     </div>
