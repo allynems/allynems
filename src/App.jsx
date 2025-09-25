@@ -23,7 +23,6 @@ function App() {
           title={sampleData.title}
           dark={dark}
           setDark={setDark}
-          exportPDF={exportPDF}
         />
 
         <ProfileCard data={sampleData} dark={dark} />
@@ -58,7 +57,7 @@ function App() {
           </Section>
 
           {/* Projetos */}
-          <Section title="Projetos">
+          <Section title="Projects">
             {sampleData.projects.map((proj, idx) => (
               <SectionItem
                 key={idx}
