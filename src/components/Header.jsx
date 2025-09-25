@@ -1,19 +1,18 @@
 import { useState } from "react";
 
 export default function Header({ name, title, dark, setDark }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="flex items-center justify-between relative">
-      <div>
-        <h1 className="text-4xl font-bold">{name}</h1>
-        <p className="text-lg text-gray-500 dark:text-gray-300">{title}</p>
-      </div>
-      <div className="space-x-2 flex items-center">
-        <a href="https://allynems.github.io/index.html" class="btn"><img src="https://allynems.github.io/img/kindpng_804195.png" alt="" width="25" height="20" class="inline"/></a>
+    <div
+      className="w-full py-12 px-6 md:px-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+    >
+      <div className="max-w-4xl mx-auto flex justify-between items-center">
+        <div>
+          <h1 className="text-4xl font-bold">{name}</h1>
+          <p className="text-lg opacity-90 mt-1">{title}</p>
+        </div>
         <button
           onClick={() => setDark(!dark)}
-          className="px-3 py-1 rounded bg-blue-500 text-white hover:bg-blue-600"
+          className="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-indigo-600 transition"
         >
           {dark ? "Light" : "Dark"}
         </button>
@@ -46,6 +45,6 @@ export default function Header({ name, title, dark, setDark }) {
           )}
         </div>
       </div>
-    </header>
+    </div>
   );
 }
