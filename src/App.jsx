@@ -28,11 +28,10 @@ function App() {
         <ProfileCard data={sampleData} dark={dark} />
 
         <main id="cv" className="space-y-6">
-          {/* Experiência */}
-          <Section title="Work Experience">
-            {sampleData.experience.map((exp, idx) => (
+          <Section title="Experience">
+            {sampleData.experience.map((exp, i) => (
               <SectionItem
-                key={idx}
+                key={i}
                 heading={exp.role}
                 subheading={`${exp.company} • ${exp.period} • ${exp.location}`}
                 details={exp.details}
@@ -40,32 +39,39 @@ function App() {
             ))}
           </Section>
 
-          {/* Educação */}
           <Section title="Education">
-            {sampleData.education.map((edu, idx) => (
+            {sampleData.education.map((ed, i) => (
               <SectionItem
-                key={idx}
-                heading={edu.degree}
-                subheading={`${edu.institution} • ${edu.period}`}
+                key={i}
+                heading={ed.degree}
+                subheading={`${ed.institution} • ${ed.period}`}
               />
             ))}
           </Section>
 
-          {/* Skills */}
           <Section title="Skills">
-            <p>{sampleData.skills.join(" • ")}</p>
+            <div className="flex flex-wrap gap-2">
+              {sampleData.skills.map((s, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-800 rounded-full text-sm"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
           </Section>
 
-          {/* Projetos */}
           <Section title="Projects">
-            {sampleData.projects.map((proj, idx) => (
+            {sampleData.projects.map((p, i) => (
               <SectionItem
-                key={idx}
-                heading={proj.title}
-                subheading={proj.description}
+                key={i}
+                heading={p.title}
+                subheading={p.description}
               />
             ))}
           </Section>
+
         </main>
       </div>
     </div>
