@@ -1,6 +1,4 @@
 import { useState } from "react";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import sampleData from "./sampleData";
 
 import Header from "./components/Header";
@@ -10,7 +8,7 @@ import SectionItem from "./components/SectionItem";
 
 function App() {
   const [dark, setDark] = useState(false);
-  
+
   return (
     <div
       className={
