@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Header({ name, title, dark, setDark }) {
   return (
     <div
