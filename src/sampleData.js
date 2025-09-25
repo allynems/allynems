@@ -3,7 +3,7 @@ const sampleData = {
   title: "Product Owner | Product Management & Offshore Systems",
   summary:
     "PhD in Chemical Engineering (NTNU, Norway) with over 7 years of international experience in applied research, software development, and product management. CSPO®-certified Product Owner skilled in backlog prioritization, AI-powered process automation, and C++ development. Fluent in English, with a history of partnerships with Norway, combining technical depth and strategic product vision to generate direct business impact.",
-  profileImage: "",
+  profileImage: "Eu.jpg",
   contacts: {
     linkedin: "https://www.linkedin.com/in/allyne-dos-santos",
     github: "https://github.com/allynems",

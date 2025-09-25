@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sampleData from "./sampleData";
 
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import ProfileCard from "./components/ProfileCard";
 import Section from "./components/Section";
 import SectionItem from "./components/SectionItem";
@@ -9,24 +9,6 @@ import SectionItem from "./components/SectionItem";
 function App() {
   const [dark, setDark] = useState(false);
   const [open, setOpen] = useState(false); // ✅ Estado do dropdown
-
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      setDark(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (dark) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-    setDarkMode(!dark);
-  };
 
   return (
     <div
@@ -36,12 +18,12 @@ function App() {
           : "bg-gray-100 text-gray-900 min-h-screen"
         }
     >
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center space-y-4 transition-colors"
-      z>
+      <div className="max-w-3xl mx-auto p-8 space-y-8">
         <Header
           name={"About me"}
           title={sampleData.title}
-          theme={toggleTheme}
+          darkMode={dark}
+          setDark={setDark}
           open={open}
           setOpen={setOpen}
         />
@@ -75,7 +57,7 @@ function App() {
               {sampleData.skills.map((s, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-800 rounded-full text-sm"
+                  className="px-3 py-1 text-gray-900 bg-blue-100 dark:bg-blue-800 rounded-full"
                 >
                   {s}
                 </span>

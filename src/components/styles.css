@@ -1,0 +1,36 @@
+.gradient-box {
+    background: linear-gradient(120deg, #155997, #129658);
+}
+
+.btn {
+  display: inline-block;
+  padding: 2px 5px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.img {
+   object-fit: contain;
+   max-width: 100%;
+   max-height: 100%;
+   width: auto;
+   height: auto;
+}
+
+.button-box{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
