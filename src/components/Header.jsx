@@ -6,7 +6,7 @@ export default function Header({ name, title, dark, setDark }) {
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         <div>
           <h1 className="text-4xl font-bold">{name}</h1>
-          <p className="text-lg opacity-90 mt-1">{title}</p>
+          {/*<p className="text-lg opacity-90 mt-1">{title}</p>*/}
         </div>
         <button
           onClick={() => setDark(!dark)}
