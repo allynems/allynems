@@ -12,10 +12,7 @@ function App() {
 
   return (
     <div
-      className={
-        dark
-          ? "bg-gray-900 text-white min-h-screen"
-          : "bg-gray-100 text-gray-900 min-h-screen"
+      className={"min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center space-y-4 transition-colors"
       }
     >
       <div className="max-w-3xl mx-auto p-8 space-y-8">

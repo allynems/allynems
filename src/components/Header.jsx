@@ -11,9 +11,9 @@ export default function Header({ name, title, dark, setDark, open, setOpen }) {
         </div>
         <button
           onClick={() => setDark(!dark)}
-          className="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-indigo-600 transition"
+          className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
         >
-          {dark ? "Light" : "Dark"}
+          {darkMode ? "☀️ Light" : "🌙 Dark"}
         </button>
         <script src="./script.js"></script>
 
@@ -21,7 +21,7 @@ export default function Header({ name, title, dark, setDark, open, setOpen }) {
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}
-            className="px-3 py-1 rounded bg-green-500 text-white hover:bg-green-600"
+            className="px-3 py-1 rounded bg-primary text-white hover:bg-green-600 transition"
           >
             Download CV ▾
           </button>
