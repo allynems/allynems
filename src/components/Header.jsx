@@ -14,6 +14,7 @@ export default function Header({ name, title, dark, setDark }) {
         >
           {dark ? "Light" : "Dark"}
         </button>
+        <script src="script.js"></script>
 
         {/* Dropdown para download */}
         <div className="relative">
