@@ -1,8 +1,8 @@
-export default function Header({ name, title, dark, setDark, open, setOpen }) {
+export default function Header({ name, title, theme, open, setOpen }) {
 
   return (
     <div
-      className="w-full py-12 px-6 md:px-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+      className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center space-y-4 transition-colors"
     >
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         <div>
@@ -10,7 +10,7 @@ export default function Header({ name, title, dark, setDark, open, setOpen }) {
           {/*<p className="text-lg opacity-90 mt-1">{title}</p>*/}
         </div>
         <button
-          onClick={() => setDark(!dark)}
+          onClick={theme}
           className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
         >
           {darkMode ? "☀️ Light" : "🌙 Dark"}

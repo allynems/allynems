@@ -10,17 +10,38 @@ function App() {
   const [dark, setDark] = useState(false);
   const [open, setOpen] = useState(false); // ✅ Estado do dropdown
 
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      setDark(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (dark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+    setDarkMode(!dark);
+  };
+
   return (
     <div
-      className={"min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center space-y-4 transition-colors"
-      }
+      className={
+      dark
+          ? "bg-gray-900 text-white min-h-screen"
+          : "bg-gray-100 text-gray-900 min-h-screen"
+        }
     >
-      <div className="max-w-3xl mx-auto p-8 space-y-8">
+      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center space-y-4 transition-colors"
+      z>
         <Header
           name={"About me"}
           title={sampleData.title}
-          dark={dark}
-          setDark={setDark}
+          theme={toggleTheme}
           open={open}
           setOpen={setOpen}
         />
