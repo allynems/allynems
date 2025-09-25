@@ -8,6 +8,7 @@ import SectionItem from "./components/SectionItem";
 
 function App() {
   const [dark, setDark] = useState(false);
+  const [open, setOpen] = useState(false); // ✅ Estado do dropdown
 
   return (
     <div
@@ -23,6 +24,8 @@ function App() {
           title={sampleData.title}
           dark={dark}
           setDark={setDark}
+          open={open}
+          setOpen={setOpen}
         />
 
         <ProfileCard data={sampleData} dark={dark} />

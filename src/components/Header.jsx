@@ -1,4 +1,5 @@
-export default function Header({ name, title, dark, setDark }) {
+export default function Header({ name, title, dark, setDark, open, setOpen }) {
+
   return (
     <div
       className="w-full py-12 px-6 md:px-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
@@ -14,7 +15,7 @@ export default function Header({ name, title, dark, setDark }) {
         >
           {dark ? "Light" : "Dark"}
         </button>
-        <script src="script.js"></script>
+        <script src="./script.js"></script>
 
         {/* Dropdown para download */}
         <div className="relative">
@@ -25,16 +26,16 @@ export default function Header({ name, title, dark, setDark }) {
             Download CV ▾
           </button>
             {open && (
-              <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md">
+              <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md flex flex-col z-50">
                 <a
-                  href="../public/CV_resume_allyne_PORT.pdf"
+                  href="CV_resume_allyne_PORT.pdf"
                   download
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   📄 CV em Português
                 </a>
                 <a
-                  href="../public/CV_resume_allyne_ENG.pdf"
+                  href="CV_resume_allyne_ENG.pdf"
                   download
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
